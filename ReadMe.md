@@ -43,7 +43,7 @@ To address this optimization problem, we employ a genetic algorithm, which is in
 
 Below is a visual representation of the genetic algorithm process:
 
-![Genetic Algorithm Flowchart](images/algoo.png)
+<img src="images/algoo.png" width="200" align="center">
 
 ### Crystal Nonlinear Profile and PMF
 
@@ -51,7 +51,7 @@ The crystal's nonlinear profile is represented by a series of domains, each with
 
 The figure below illustrates the relationship between the crystal's domain configuration and the resulting PMF:
 
-![Crystal Nonlinear Profile and PMF](images/pmfScheme.png)
+<img src="images/pmfScheme.png" width="200" align="center">
 
 ### Crossover Operation in the Genetic Algorithm
 
@@ -59,7 +59,7 @@ Crossover is a key operation in the genetic algorithm, where two parent configur
 
 The following figure demonstrates the crossover operation:
 
-![Crossover Operation](images/gaSheme.png)
+<img src="images/gaSheme.png" width="200" align="center">
 
 ## Installation
 
