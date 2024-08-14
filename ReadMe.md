@@ -14,19 +14,19 @@ In the context of second-order nonlinear optics, the phase-matching function (PM
 
 Each domain configuration corresponds to a specific PMF, which can be expressed mathematically as:
 
-\[
+$$
 \Phi(\Delta k) = \int_{-L/2}^{L/2} g(z) e^{i \Delta k (\omega_s, \omega_i)} dz,
-\]
+$$
 
-where \(L\) is the length of the crystal, \(\Delta k (\omega_s, \omega_i) = k_p(\omega_s + \omega_i) - k_s(\omega_s) - k_i(\omega_i)\) is the phase mismatch, and \(g(z) \in \{-1, +1\}\) represents the nonlinear profile along the propagation direction \(z\).
+where $L$ is the length of the crystal, $\Delta k (\omega_s, \omega_i) = k_p(\omega_s + \omega_i) - k_s(\omega_s) - k_i(\omega_i)$ is the phase mismatch, and $g(z) \in \{-1, +1\}$ represents the nonlinear profile along the propagation direction $z$.
 
-The objective is to minimize the difference between the calculated PMF and a target PMF \(\Phi_t(\Delta k)\) using the Mean Squared Error (MSE):
+The objective is to minimize the difference between the calculated PMF and a target PMF $\Phi_t(\Delta k)$ using the Mean Squared Error (MSE):
 
-\[
+$$
 \text{MSE}_{\text{pmf}} = \sum_{n=1}^M \frac{(\Phi (\Delta k_n) - \Phi_t (\Delta k_n))^2}{M},
-\]
+$$
 
-where \(M\) is the number of sampled points in the phase mismatch range.
+where $M$ is the number of sampled points in the phase mismatch range.
 
 ### Genetic Algorithm for PMF Optimization
 
@@ -43,7 +43,7 @@ To address this optimization problem, we employ a genetic algorithm, which is in
 
 Below is a visual representation of the genetic algorithm process:
 
-![Genetic Algorithm Flowchart](algoo.png)
+![Genetic Algorithm Flowchart](images/algoo.png)
 
 ### Crystal Nonlinear Profile and PMF
 
@@ -51,7 +51,7 @@ The crystal's nonlinear profile is represented by a series of domains, each with
 
 The figure below illustrates the relationship between the crystal's domain configuration and the resulting PMF:
 
-![Crystal Nonlinear Profile and PMF](pmfScheme.png)
+![Crystal Nonlinear Profile and PMF](images/pmfScheme.png)
 
 ### Crossover Operation in the Genetic Algorithm
 
@@ -59,7 +59,7 @@ Crossover is a key operation in the genetic algorithm, where two parent configur
 
 The following figure demonstrates the crossover operation:
 
-![Crossover Operation](gaSheme.png)
+![Crossover Operation](images/gaSheme.png)
 
 ## Installation
 
