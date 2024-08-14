@@ -24,7 +24,7 @@ where $L$ is the length of the crystal, $\Delta k (\omega_s, \omega_i) = k_p(\om
 The objective is to minimize the difference between the calculated PMF and a target PMF $\Phi_t(\Delta k)$ using the Mean Squared Error (MSE):
 
 $$
-\text{MSE}_{\text{pmf}} = \sum_{n=1}^M \frac{(\Phi (\Delta k_n) - \Phi_t (\Delta k_n))^2}{M},
+MSE_{pmf} = \sum_{n=1}^M \frac{(\Phi (\Delta k_n) - \Phi_t (\Delta k_n))^2}{M},
 $$
 
 where $M$ is the number of sampled points in the phase mismatch range.
@@ -34,6 +34,7 @@ where $M$ is the number of sampled points in the phase mismatch range.
 To address this optimization problem, we employ a genetic algorithm, which is inspired by the process of natural evolution. The algorithm iteratively improves a population of possible solutions by applying operations such as selection, crossover, and mutation.
 
 #### Algorithm Flow
+<img src="images/algoo.png" width="400" align="right">
 
 1. **Population Initialization**: A population of potential solutions (crystal configurations) is randomly generated.
 2. **Fitness Computation**: The fitness of each configuration is evaluated based on the MSE between the computed and target PMFs.
@@ -42,19 +43,14 @@ To address this optimization problem, we employ a genetic algorithm, which is in
 5. **Mutation**: Random changes are introduced to some configurations to explore new areas of the solution space.
 6. **Termination**: The algorithm repeats the process until a termination condition is met, such as reaching a maximum number of generations or achieving a satisfactory fitness level.
 
-Below is a visual representation of the genetic algorithm process:
-
-<img src="images/algoo.png" width="400" align="center">
-
 ### Crystal Nonlinear Profile and PMF
 
 The crystal's nonlinear profile is represented by a series of domains, each with an orientation of either +1 or -1. The genetic algorithm manipulates these orientations to optimize the PMF.
 
 ### Crossover Operation in the Genetic Algorithm
+<img src="images/gaSheme.png" width="400" align="right">
 
 Crossover is a key operation in the genetic algorithm, where two parent configurations are combined to produce offspring. The crossover point is randomly selected, and portions of the parents' configurations are swapped to create new solutions.
-
-<img src="images/gaSheme.png" width="400" align="center">
 
 ## Installation
 
