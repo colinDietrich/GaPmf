@@ -1,4 +1,5 @@
-# PNF Optimization
+# Phase-Matching Function (PMF) Optimization
+<img src="images/pmfScheme.png" width="400" align="right">
 
 This repository contains code for optimizing second-order nonlinear materials to develop bright and broadband entangled photon sources. The project leverages genetic algorithms to optimize the phase-matching function (PMF) of nonlinear crystals, crucial for enhancing the performance of quantum light sources used in applications like quantum imaging and metrology.
 
@@ -43,23 +44,17 @@ To address this optimization problem, we employ a genetic algorithm, which is in
 
 Below is a visual representation of the genetic algorithm process:
 
-<img src="images/algoo.png" width="200" align="center">
+<img src="images/algoo.png" width="400" align="center">
 
 ### Crystal Nonlinear Profile and PMF
 
 The crystal's nonlinear profile is represented by a series of domains, each with an orientation of either +1 or -1. The genetic algorithm manipulates these orientations to optimize the PMF.
 
-The figure below illustrates the relationship between the crystal's domain configuration and the resulting PMF:
-
-<img src="images/pmfScheme.png" width="200" align="center">
-
 ### Crossover Operation in the Genetic Algorithm
 
 Crossover is a key operation in the genetic algorithm, where two parent configurations are combined to produce offspring. The crossover point is randomly selected, and portions of the parents' configurations are swapped to create new solutions.
 
-The following figure demonstrates the crossover operation:
-
-<img src="images/gaSheme.png" width="200" align="center">
+<img src="images/gaSheme.png" width="400" align="center">
 
 ## Installation
 
