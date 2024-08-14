@@ -2,7 +2,6 @@ from random import choices, randint, randrange, random, shuffle, sample
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-import copy
 from typing import List, Tuple, Callable, Optional
 from IPython.display import clear_output
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -350,7 +349,7 @@ class GA:
             population = self.generate_population(self.size, self.option)
         else:
             total_fitness, fitness_values = self.population_fitness(population, self.fitness_function)
-            population = copy.deepcopy(self.sort_population(population, fitness_values))
+            population = self.sort_population(population, fitness_values)
         
         self.metrics = {
             'best_fitness': [],
@@ -392,7 +391,7 @@ class GA:
             with ProcessPoolExecutor() as executor:
                 futures = []
                 for j in range(len(population) // 2):
-                    parents = copy.deepcopy([population[2 * j], population[2 * j + 1]])
+                    parents = [population[2 * j], population[2 * j + 1]]
                     if random() < self.Pu1:
                         parents[0], parents[1] = self.uniform_crossover(parents[0], parents[1])
                     if random() < self.Ps:
@@ -405,14 +404,14 @@ class GA:
 
             new_population_injection = self.generate_population(self.size // 10, 'random')
             N = self.size - len(best_genomes) - len(new_population_injection)
-            population = copy.deepcopy(best_genomes + new_population_injection + sample(next_generation, N))
+            population = best_genomes + new_population_injection + sample(next_generation, N)
             total_fitness, fitness_values = self.population_fitness(population, self.fitness_function)
             population = self.sort_population(population, fitness_values)
 
             if restart is not None:
                 if i % restart == 0 and i != 0:
                     new_population_injection = self.generate_population(restart_depth, 'random')
-                    population = copy.deepcopy(new_population_injection + population[:self.size - restart_depth])
+                    population = new_population_injection + population[:self.size - restart_depth]
                     total_fitness, fitness_values = self.population_fitness(population, self.fitness_function)
                     population = self.sort_population(population, fitness_values)
 
