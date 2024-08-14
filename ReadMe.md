@@ -44,11 +44,11 @@ To address this optimization problem, we employ a genetic algorithm, which is in
 6. **Termination**: The algorithm repeats the process until a termination condition is met, such as reaching a maximum number of generations or achieving a satisfactory fitness level.
 
 ### Crystal Nonlinear Profile and PMF
+<img src="images/gaSheme.png" width="300" align="right">
 
 The crystal's nonlinear profile is represented by a series of domains, each with an orientation of either +1 or -1. The genetic algorithm manipulates these orientations to optimize the PMF.
 
 ### Crossover Operation in the Genetic Algorithm
-<img src="images/gaSheme.png" width="300" align="right">
 
 Crossover is a key operation in the genetic algorithm, where two parent configurations are combined to produce offspring. The crossover point is randomly selected, and portions of the parents' configurations are swapped to create new solutions.
 
