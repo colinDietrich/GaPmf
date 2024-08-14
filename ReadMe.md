@@ -57,6 +57,6 @@ Crossover is a key operation in the genetic algorithm, where two parent configur
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone [https://github.com/yourusername/PNF-Optimization.git](https://github.com/colinDietrich/GaPmf.git)
+git clone https://github.com/colinDietrich/GaPmf.git
 cd GaPmf
 pip install -r requirements.txt
