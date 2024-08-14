@@ -1,5 +1,5 @@
 # Phase-Matching Function (PMF) Optimization
-<img src="images/pmfScheme.png" width="400" align="right">
+<img src="images/pmfScheme.png" width="500" align="right">
 
 This repository contains code for optimizing second-order nonlinear materials to develop bright and broadband entangled photon sources. The project leverages genetic algorithms to optimize the phase-matching function (PMF) of nonlinear crystals, crucial for enhancing the performance of quantum light sources used in applications like quantum imaging and metrology.
 
@@ -34,7 +34,7 @@ where $M$ is the number of sampled points in the phase mismatch range.
 To address this optimization problem, we employ a genetic algorithm, which is inspired by the process of natural evolution. The algorithm iteratively improves a population of possible solutions by applying operations such as selection, crossover, and mutation.
 
 #### Algorithm Flow
-<img src="images/algoo.png" width="400" align="right">
+<img src="images/algoo.png" width="300" align="right">
 
 1. **Population Initialization**: A population of potential solutions (crystal configurations) is randomly generated.
 2. **Fitness Computation**: The fitness of each configuration is evaluated based on the MSE between the computed and target PMFs.
@@ -48,7 +48,7 @@ To address this optimization problem, we employ a genetic algorithm, which is in
 The crystal's nonlinear profile is represented by a series of domains, each with an orientation of either +1 or -1. The genetic algorithm manipulates these orientations to optimize the PMF.
 
 ### Crossover Operation in the Genetic Algorithm
-<img src="images/gaSheme.png" width="400" align="right">
+<img src="images/gaSheme.png" width="300" align="right">
 
 Crossover is a key operation in the genetic algorithm, where two parent configurations are combined to produce offspring. The crossover point is randomly selected, and portions of the parents' configurations are swapped to create new solutions.
 
@@ -57,6 +57,6 @@ Crossover is a key operation in the genetic algorithm, where two parent configur
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/yourusername/PNF-Optimization.git
-cd PNF-Optimization
+git clone [https://github.com/yourusername/PNF-Optimization.git](https://github.com/colinDietrich/GaPmf.git)
+cd GaPmf
 pip install -r requirements.txt
