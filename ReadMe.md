@@ -1,7 +1,7 @@
 # Phase-Matching Function (PMF) Optimization
 <img src="images/pmfScheme.png" width="500" align="right">
 
-This repository contains code for optimizing second-order nonlinear materials to develop bright and broadband entangled photon sources. The project leverages genetic algorithms to optimize the phase-matching function (PMF) of nonlinear crystals, crucial for enhancing the performance of quantum light sources used in applications like quantum imaging and metrology.
+This repository contains code for optimizing second-order nonlinear materials to develop bright, broadband and pure entangled photon sources. The project uses a genetic algorithms to optimize the phase-matching function (PMF) of nonlinear crystals.
 
 ## Overview
 
